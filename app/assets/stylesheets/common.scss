@@ -1,0 +1,97 @@
+*, ::after, ::before{
+  box-sizing: border-box;
+}
+
+header{
+  width: 100%;
+  height: 65px;
+  padding: 4px 30px;
+  background-color: black;
+}
+
+footer{
+  
+  bottom: 0;
+  width: 100%;
+  height: 180px;
+  margin-top: 64px;
+  padding-top: 90px;
+  background-color: black;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+}
+
+body, p, ol, ul, td{
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p{
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.top .top-main{
+  background-image: url("/assets/img_cover_top.jpg");
+  width: 100%;
+  height: 650px;
+  background-size: cover;
+}
+
+.container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.m-5{
+  margin: 3rem!important;
+}
+
+.top .section-title{
+  font-size: 24px;
+  margin: 35px 0;
+  font-weight: bold;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.top span{
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  color: black;
+  font-weight: bold;
+  z-index: 1;
+  margin: auto;
+  text-align: center;
+  font-size: 24px;
+}
+
+.top .panel-image{
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+img{
+  vertical-align: middle;
+  border-style: none;
+}
+
+.col-lg-3{
+  flex: 0 0 25%;
+  max-width: 25%;
+}
