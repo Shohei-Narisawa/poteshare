@@ -1,0 +1,64 @@
+<div class="container-field room-new">
+  <div class="row">
+    <div class="col-lg-2 room-nav room-nav-pc d-lg-block d-none">
+      <ul>
+        <li class="active">
+          <a href="/rooms/new">基本情報</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-2 room-nav room-nav-mobile d-lg-none">
+      <ul>
+        <li class="active">
+          <a href="/rooms/new">基本情報</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-10 room-view">
+      <div class="room-view-box">
+        <%= form_with model: @room do |form| %>
+          <div class="update-content">
+            <div class="row">
+              <h5>ルーム情報登録</h5>
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <%= form.label :name, "ルーム名", class: "col-md-3 required-a" %>
+              <%= form.text_field :name, class: "form-control mb-4 col-md-9" %>
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <%= form.label :introduction, "ルーム紹介", class: "col-md-3 required-a" %>
+              <%= form.text_area :introduction, class: "form-control mb-4 col-md-9" %>
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <%= form.label :price, "料金", class: "col-md-3 required-a" %>
+              <%= form.text_field :price, class: "form-control mb-4 col-md-9" %>
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <%= form.label :address, "住所", class: "col-md-3 required-a" %>
+              <%= form.text_field :address, class: "form-control mb-4 col-md-9" %>
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <%= form.label :name, "ルーム名", class: "col-md-3 required-a" %>
+              <%= form.text_field :name, class: "form-control mb-4 col-md-9" %>
+            </div>
+          </div>
+          <div class="update-content">
+            <div class="row">
+              <%= form.submit "登録" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
