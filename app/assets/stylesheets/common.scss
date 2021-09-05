@@ -413,3 +413,45 @@ table{
 .room-new .update-content label{
   font-weight: bold;
 }
+
+.required-a::after{
+  content: "必須";
+  color: #fff;
+  background-color: #ff0000a8;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 4px;
+  margin: 0 5px;
+}
+
+@media screen and (min-width: 768px){
+  .col-md-3{
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .col-md-9{
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+}
+
+textarea.form-control{
+  height: auto;
+}
+
+@media screen and (min-width: 768px){
+  .col-md-2{
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+  }
+}
+
+button, input, optgroup, select, textarea{
+  margin:0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
