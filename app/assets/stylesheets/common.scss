@@ -455,3 +455,17 @@ button, input, optgroup, select, textarea{
   font-size: inherit;
   line-height: inherit;
 }
+
+.room-posts-image{
+  width: 240px;
+  height: 140px;
+  object-style: cover;
+}
+
+.room-index table tbody tr:nth-child(even), .reservations table tbody tr:nth-child(even){
+  background-color: #f9fafb;
+}
+
+.room-index table tbody tr, .reservations table tbody tr{
+  border-bottom: 1px solid #eaedef;
+}

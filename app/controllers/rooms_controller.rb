@@ -8,6 +8,13 @@ class RoomsController < ApplicationController
   end
   
   def create
+    @room = Room.new(name: params[:name], introduction: params[:introduction], price: params[:price], address: params[:address], img: params[:img])
+    @room.image_name = "#{@room.id}.jpg"
+    if @room.save
+      redirect_to :rooms
+    else
+      render "new"
+    end
   end
 
   def show

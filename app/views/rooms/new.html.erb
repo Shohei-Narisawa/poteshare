@@ -16,7 +16,7 @@
     </div>
     <div class="col-lg-10 room-view">
       <div class="room-view-box">
-        <%= form_with model: @room do |form| %>
+        <%= form_with url: "/rooms/create" do |form| %>
           <div class="update-content">
             <div class="row">
               <h5>ルーム情報登録</h5>
@@ -37,7 +37,7 @@
           <div class="update-content">
             <div class="row">
               <%= form.label :price, "料金", class: "col-md-3 required-a" %>
-              <%= form.text_field :price, class: "form-control mb-4 col-md-9", placeholder: "一日あたりの料金を入力" %>
+              <%= form.number_field :price, class: "form-control mb-4 col-md-9", min: 0, placeholder: "一日あたりの料金を入力" %>
             </div>
           </div>
           <div class="update-content">
@@ -48,8 +48,8 @@
           </div>
           <div class="update-content">
             <div class="row">
-              <%= form.label :image, "ルーム画像", class: "col-md-3 required-a" %>
-              <%= form.file_field :image, class: "mb-4 col-md-9" %>
+              <%= form.label :img, "ルーム画像", class: "col-md-3 required-a" %>
+              <%= form.file_field :img, class: "mb-4 col-md-9" %>
             </div>
           </div>
           <div class="update-content">

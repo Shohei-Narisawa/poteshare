@@ -13,11 +13,11 @@
     <tbody>
       <% @rooms.each do |room| %>
       <tr>
-        <td></td>
-        <td><%= room.name%></td>
+        <td><img class="room-posts-image" src="<%= "/room_images/default_room.jpg" %>"></td>
+        <td><%= room.name %></td>
         <td><%= room.introduction %></td>
         <td><%= room.price %></td>
-        <td><%= room.creared_at %></td>
+        <td><%= room.created_at.to_s(:datetime_jp) %></td>
       </tr>
       <% end %>
     </tbody>
