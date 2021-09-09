@@ -13,11 +13,12 @@
     <tbody>
       <% @rooms.each do |room| %>
       <tr>
-        <td><img class="room-posts-image" src="<%= "/room_images/default_room.jpg" %>"></td>
-        <td><%= room.name %></td>
-        <td><%= room.introduction %></td>
-        <td><%= room.price %></td>
+        <td><%= link_to image_tag("/room_images/#{room.image_name}", class: "room-posts-image"), room %></td>
+        <td class="posts-name"><%= link_to room.name, room %></td>
+        <td class="posts-content"><%= room.introduction %></td>
+        <td class-"price-icon"><%= room.price %></td>
         <td><%= room.created_at.to_s(:datetime_jp) %></td>
+        <td><%= link_to '削除', room, method: :delete, data: { confirm: "本当に削除しますか？" } %>
       </tr>
       <% end %>
     </tbody>

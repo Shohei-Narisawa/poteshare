@@ -456,16 +456,112 @@ button, input, optgroup, select, textarea{
   line-height: inherit;
 }
 
-.room-posts-image{
-  width: 240px;
-  height: 140px;
-  object-style: cover;
-}
-
 .room-index table tbody tr:nth-child(even), .reservations table tbody tr:nth-child(even){
   background-color: #f9fafb;
 }
 
 .room-index table tbody tr, .reservations table tbody tr{
   border-bottom: 1px solid #eaedef;
+}
+
+.room-show, .reservations-new{
+  padding: 30px 0;
+}
+
+@media screen and (min-width: 768px){
+  .col-md-8{
+    flex: 0 0 66.7%;
+    max-width: 66.7%;
+  }
+}
+
+.room-show-image, .reservations-new-image{
+  width: 100%;
+  object-fit: cover;
+}
+
+.room-show-detile, .reservations-new-detile{
+  display: flex;
+  align-items: center;
+}
+
+.room-show-detile-icon, .reservations-new-detile-icon{
+  padding: 10px;
+}
+
+.host-icon{
+ width: 65px;
+ height: 65px;
+ object-fit: cover;
+ border-radius: 50px;
+}
+
+.room-show-profile, .reservations-new-profile{
+  padding: 15px;
+}
+
+.room-show-profile-name, .reservations-new-profile-name{
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 0;
+}
+
+.room-show-profile-address, .reservations-new-profile-address{
+  font-size: 14px;
+}
+
+.room-show-detile-content, .reservations-new-detile-content{
+  font-size: 16px;
+  line-height: 30px;
+  padding: 30px 10px;
+  border-top: 1px solid #eaedef;
+  border-bottom: 1px solid #eaedef;
+  word-break: break-all;
+}
+
+@media screen and (min-width: 768px){
+  .col-md-4{
+    flex: 0 0 33.3%;
+    max-width: 33.3%;
+  }
+}
+
+.room-show-nav, .reservations-new-nav{
+  padding: 20px;
+  border: 1px solid #eaedef;
+}
+
+.price-icon::before{
+  content: "¥";
+  padding-left: 3px;
+}
+
+.room-show-date-select, .reservations-new-date-select{
+  padding: 15px 0;
+}
+
+.room-show-date-select label, .reservations-new-date-select label{
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+label{
+  display: block;
+}
+
+.room-posts-image, .reservations-image{
+  width: 240px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.room-index table tbody .posts-name, .reservations table tbody .posts-name{
+  font-size: 18px;
+  font-weight: bold;
+  color: #909090;
+}
+
+.room-index table tbody a, .reservations table tbody a{
+  color: #4a90e2;
+  text-decoration: underline;
 }
