@@ -1,0 +1,39 @@
+<div class="container device">
+  <div class="device_frame">
+    <h2 class="mb-3">アカウント編集</h2>
+    <div class="device_inner">
+      <%= form_with url: "/users/update", class: "edit_user" do |form| %>
+        <div class="field">
+          <div class="form-group">
+            <%= form.label :email, "メールアドレス" %>
+            <%= form.text_field :email, class: "form-control", placeholder: "メールアドレスを入力してください" %>
+          </div>
+        </div>
+        <div class="field">
+          <div class="form-group">
+            <%= form.label :password, "変更後パスワード (変更する場合のみ入力)" %>
+            <%= form.text_field :email, class: "form-control" %>
+          </div>
+        </div>
+        <div class="field">
+          <div class="form-group">
+            <%= form.label :password, "パスワード確認用 (変更する場合のみ入力)" %>
+            <%= form.text_field :email, class: "form-control" %>
+          </div>
+        </div>
+        <div class="field">
+          <div class="form-group">
+            <%= form.label :email, "現在のパスワード" %>
+            <%= form.text_field :email, class: "form-control", placeholder: "現在のパスワードを入力" %>
+          </div>
+        </div>
+        <div class="actions">
+          <%= form.submit "更新", class: "form-control btn-primary my-4"%>
+        </div>
+        <div class="actions">
+          <%= link_to "戻る", "/users/account", class: "form-control btn btn-outline-secondary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
