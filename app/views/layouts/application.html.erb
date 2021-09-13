@@ -11,6 +11,33 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="header-left-nav">
+        <%= link_to image_tag("/assets/logo.png", class: "logo-img h-100"), "/" %>
+        <%= form_for :rooms_search, method: :get do |form| %>
+          <div class="header-search d-lg-inline-block d-none">
+            <%= form.text_field :area, value: "", class: "form-control pl-4", placeholder: "エリア" %>
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="header-search d-lg-inline-block d-none">
+            <%= form.text_field :keyword, value: "", class: "form-control pl-4", placeholder: "キーワード" %>
+            <i class="fas fa-search"></i>
+          </div>
+          <%= form.submit "", class: "d-none" %>
+        <% end %>
+      </div>
+      <div class="header-right-nav">
+        <div class="nav-item">
+          <%= link_to "ログイン", "/users/sign_in", class: "btn btn-primary my-2 mx-3" %>
+          <%= link_to "登録する", "/users/new",  class: "btn btn-secondary" %>
+        </div>
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <p>© 2020 POTEPAN.INC.</p>
+    </footer>
   </body>
 </html>
